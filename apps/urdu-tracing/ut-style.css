@@ -1,0 +1,183 @@
+@font-face{
+    font-family:'Urdu';
+    src:url('../../assets/fonts/jameel-noori-nastaleeq.ttf');
+}
+
+body,
+.card,
+.title,
+.msg{
+    font-family:'Urdu';
+}
+
+body{
+    margin:0;
+    background:#000;
+    text-align:center;
+    direction:rtl;
+    font-family:'Jameel Noori Nastaleeq','Noto Nastaliq Urdu',serif;
+}
+
+.title{
+background:linear-gradient(90deg,#FF9800,#4CAF50);
+color:white;
+padding:10px;
+margin:0;
+font-size:26px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+padding:10px;
+}
+
+.card{
+    padding:10px;
+    font-size:60px;
+    border-radius:16px;
+    //font-weight:bold;
+    cursor:pointer;
+    user-select:none;
+
+    color:transparent;
+    -webkit-text-stroke:2px #111;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-family:'Jameel Noori Nastaleeq','Noto Nastaliq Urdu',serif;
+
+    transition:0.2s;
+}
+.popup{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.7);
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.popup-box{
+    background: linear-gradient(145deg, #ffffff, #f3f7ff);
+    width: 92%;
+    max-width: 380px;
+    padding: 18px;
+    border-radius: 28px;
+    position: relative;
+    text-align: center;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+    border: 2px solid rgba(76,175,80,0.15);
+}
+
+.popup-close{
+    position:absolute;
+	z-index:100;
+    top:10px;
+    right:10px;
+    background: linear-gradient(135deg,#ff4d4d,#ff1a1a);
+    color:white;
+    border:none;
+    border-radius:50%;
+    width:36px;
+    height:36px;
+    font-size:18px;
+    cursor:pointer;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.hidden{display:none !important;}
+
+.trace-box{
+    position:relative;
+    width:100%;
+    height:260px;
+
+    background: linear-gradient(180deg,#ffffff,#f7f9ff);
+
+    border-radius:22px;
+    border:2px dashed rgba(76,175,80,0.3);
+
+    overflow:hidden;
+
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+canvas{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    touch-action:none;
+}
+
+#guideCanvas{
+    z-index:1;
+    opacity:0.35;
+}
+
+#canvas{
+    z-index:2;
+}
+
+.btn-row{
+display:flex;
+gap:10px;
+margin-top:10px;
+}
+
+.btn-row button{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:14px;
+
+    font-size:15px;
+    font-weight:600;
+
+    background: linear-gradient(135deg,#4CAF50,#43a047);
+    color:white;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    transition:0.2s;
+}
+
+.btn-row button:active{
+    transform:scale(0.96);
+}
+
+.msg{
+    margin-top:10px;
+    font-size:18px;
+    font-weight:bold;
+    padding:6px 10px;
+    border-radius:10px;
+}
+
+.home-btn{
+    width:100%;
+    margin-top:12px;
+    padding:14px;
+
+    border:none;
+    border-radius:14px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    background:linear-gradient(135deg,#FF9800,#4CAF50);
+    color:white;
+
+    cursor:pointer;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.home-btn:active{
+    transform:scale(0.97);
+}

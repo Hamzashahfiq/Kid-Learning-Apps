@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kids Learning App</title>
+
+<link rel="stylesheet" href="abcl-style.css">
+</head>
+
+<body>
+
+<h2 class="title">ABC Learning</h2>
+
+<div id="grid" class="grid"></div>
+
+<!-- POPUP -->
+<div id="popup" class="popup hidden" onclick="outsideClick(event)">
+  <div class="popup-box">
+
+    
+    <button class="popup-sound"
+    onclick="repeatSpeak()">🔊</button>
+    
+    <button class="popup-close"
+    onclick="closePopup()">✕</button>    
+    
+    <div id="popup-header" class="popup-header"></div>
+
+    <!-- <img id="popup-img" class="popup-img"> -->
+
+    <div class="image-frame">
+
+  <button class="img-nav left" onclick="prevImage()">&#10094;</button>
+
+  <img id="popup-img" class="popup-img">
+
+  <button class="img-nav right" onclick="nextImage()">&#10095;</button>
+
+	</div>
+
+    <div id="popup-text" class="popup-text"></div>
+
+    <div class="nav">
+      <button onclick="prevItem()">◀ Prev</button>
+      <button onclick="nextItem()">Next ▶</button>
+    </div>
+
+    <!-- <button class="close" onclick="closePopup()">❌ Close</button> -->
+
+  </div>
+</div>
+
+<button class="home-btn" onclick="window.location.href='../../main-index.html'">
+  <span class="home-icon">🏡</span>
+  <span class="home-text">Home</span>
+</button>
+
+<script src="abcl-script.js"></script>
+
+</body>
+</html>
